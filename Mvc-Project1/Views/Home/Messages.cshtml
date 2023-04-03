@@ -1,0 +1,40 @@
+@model List<ContactUs>
+
+
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-xl-6 col-lg-8">
+                    <h1>Welcome ToDo List<span>.</span></h1>
+                    <h2>Your goal is to Check them all</h2>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+    <div class="content d-flex flex-column justify-content-center">
+        <h3>Voluptatem dignissimos provident quasi</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+        </p>
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                        <i class="bi bi-emoji-smile"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="0" class="purecounter">65</span>
+                        <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div><!-- End .content-->
+</div>
+

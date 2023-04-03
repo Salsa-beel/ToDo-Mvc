@@ -1,0 +1,63 @@
+﻿<!-- ======= Hero Section ======= -->
+
+
+@model List<Category>
+
+<section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-xl-6 col-lg-8">
+                <h1>Welcome ToDo List<span>.</span></h1>
+                <h2>Your goal is to Check them all</h2>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section><!-- End Hero -->
+
+
+
+<section id="services" class="services">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>ToDo</h2>
+            <p>Check Them All</p>
+        </div>
+
+        <div class="row">
+
+            @foreach (var item in Model) // model is a keyword byst2bl el data el  hya result
+            {
+                @*<p>@item.Name</p>*@
+
+                  
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box" style="width:100%">
+
+                    <a href=" /Home/Tasks/@item.Id ">
+
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4><a href="">@item.Name</a></h4>
+                        <p>@item.Description</p>
+
+                    </a>
+
+                </div>
+
+               
+            </div>
+
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
